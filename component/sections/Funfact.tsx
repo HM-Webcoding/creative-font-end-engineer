@@ -18,7 +18,9 @@ const FunFact = () => {
     <section id="fun_fact" className="pb-24" aria-labelledby="funFactHeading">
       <div className="container mx-auto px-4">
         <div
-          ref={(el) => (headingRefs.current[0] = el)}
+          ref={(el) => {
+            headingRefs.current[0] = el;
+          }}
           className="max-w-[1365px] mx-auto grid grid-cols-2 sm:grid-cols-2 md:grid-cols-5 gap-8 justify-between items-center"
         >
           {funFacts.map((fact) => (
