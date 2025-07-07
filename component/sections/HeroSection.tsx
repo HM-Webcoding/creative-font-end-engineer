@@ -21,9 +21,9 @@ import MovingAnimatedShape from "@/component/MovingAnimatedShape";
 
 const HeroSection = () => {
   const headingRefs = useRef([]);
-  const cardRef = useRef();
-  const shapeRef = useRef();
-  const imageRefs = useRef();
+  const cardRef = useRef(null);
+  const shapeRef = useRef(null);
+  const imageRefs = useRef(null);
   const orbitRef = useRef(null);
 
   useGsapAnim(headingRefs, "fadeInUp");

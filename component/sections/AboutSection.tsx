@@ -12,8 +12,8 @@ import useGsapAnim from "@/hooks/useGsapAnimation";
 
 const AboutSection = () => {
   const headingRefs = useRef([]);
-  const cardRef = useRef();
-  const imageRefs = useRef();
+  const cardRef = useRef(null);
+  const imageRefs = useRef(null);
 
   useGsapAnim(headingRefs, "fadeInUp");
   useGsapAnim(cardRef, "fadeInRight", 0.2);
