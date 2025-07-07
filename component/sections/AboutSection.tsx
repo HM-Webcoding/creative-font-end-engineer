@@ -39,7 +39,9 @@ const AboutSection = () => {
 
           {/* Right Content */}
           <div
-            ref={(el) => (headingRefs.current[0] = el)}
+            ref={(el) => {
+              headingRefs.current[0] = el;
+            }}
             className="w-full lg:max-w-[565px] mr-auto px-0 md:px-3"
           >
             <div className="mb-4">
@@ -54,21 +56,27 @@ const AboutSection = () => {
               aria-labelledby="about-heading"
             >
               <h2
-                ref={(el) => (headingRefs.current[1] = el)}
+                ref={(el) => {
+                  headingRefs.current[1] = el;
+                }}
                 id="about-heading"
                 className="text-5xl md:text-4xl font-semibold max-w-xl pt-6 text-[var(--headingColor)]"
               >
                 All-in-one web solution for your business
               </h2>
               <p
-                ref={(el) => (headingRefs.current[2] = el)}
+                ref={(el) => {
+                  headingRefs.current[2] = el;
+                }}
                 className="pt-4 text-[var(--textColor)] max-w-2xl"
               >
                 We are creative agency, we are here to helping your business
                 growth consectetur adipiscing.
               </p>
               <ul
-                ref={(el) => (headingRefs.current[3] = el)}
+                ref={(el) => {
+                  headingRefs.current[3] = el;
+                }}
                 className="mt-6 space-y-4 list-none pl-10 relative"
               >
                 {[
@@ -89,7 +97,9 @@ const AboutSection = () => {
             </article>
 
             <div
-              ref={(el) => (headingRefs.current[4] = el)}
+              ref={(el) => {
+                headingRefs.current[4] = el;
+              }}
               className="pt-10 flex flex-col md:flex-row items-start md:items-center gap-6"
             >
               <Link href="/about" className="text-[var(--textColor)]">

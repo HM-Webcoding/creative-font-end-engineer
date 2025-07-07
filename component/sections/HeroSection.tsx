@@ -45,7 +45,9 @@ const HeroSection = () => {
         <div className="max-w-[1070px] z-1 relative">
           <header className="relative w-fit">
             <h1
-              ref={(el) => (headingRefs.current[0] = el)}
+              ref={(el) => {
+                headingRefs.current[0] = el;
+              }}
               className="text-[42px] sm:text-[56px] lg:text-[64px] xl:text-[100px] font-bold leading-tight text-[var(--headingColor)]"
             >
               We shape the future of{" "}
@@ -54,7 +56,9 @@ const HeroSection = () => {
               </span>
             </h1>
             <p
-              ref={(el) => (headingRefs.current[1] = el)}
+              ref={(el) => {
+                headingRefs.current[1] = el;
+              }}
               className="pt-6 text-[18px] leading-[32px] max-w-[574px] text-[var(--textColor)]"
             >
               A business consultant is a professional who provides expert advice
@@ -84,7 +88,9 @@ const HeroSection = () => {
 
           {/* CTA and Contact */}
           <div
-            ref={(el) => (headingRefs.current[2] = el)}
+            ref={(el) => {
+              headingRefs.current[2] = el;
+            }}
             className="pt-12 flex items-center gap-8 flex-wrap"
           >
             <Link href="/about" className="text-[var(--textColor)]">
@@ -96,13 +102,17 @@ const HeroSection = () => {
               </div>
               <div>
                 <p
-                  ref={(el) => (headingRefs.current[3] = el)}
+                  ref={(el) => {
+                    headingRefs.current[3] = el;
+                  }}
                   className="text-sm text-[var(--textColor)]"
                 >
                   Free Consultant
                 </p>
                 <address
-                  ref={(el) => (headingRefs.current[4] = el)}
+                  ref={(el) => {
+                    headingRefs.current[4] = el;
+                  }}
                   className="not-italic text-base text-[var(--headingColor)]"
                 >
                   <a href="tel:(406) 555-0120">(406) 555-0120</a>
@@ -113,7 +123,9 @@ const HeroSection = () => {
 
           {/* Client Avatars */}
           <div
-            ref={(el) => (headingRefs.current[5] = el)}
+            ref={(el) => {
+              headingRefs.current[5] = el;
+            }}
             className="pt-10 flex items-center gap-5 flex-wrap"
           >
             <div className="flex items-center -space-x-4">
