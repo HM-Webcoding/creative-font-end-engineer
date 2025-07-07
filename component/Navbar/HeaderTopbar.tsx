@@ -15,7 +15,7 @@ import Image from "next/image";
 import useGsapAnim from "@/hooks/useGsapAnimation";
 
 const HeaderTopbar = () => {
-  const topHeaderRef = useRef();
+  const topHeaderRef = useRef<HTMLElement | null>(null);
   useGsapAnim(topHeaderRef, "slideFadeDown");
 
   return (
