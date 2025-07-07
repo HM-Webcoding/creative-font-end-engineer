@@ -1,0 +1,110 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+/* @media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+} */
+
+:root {
+  --textColor: #838a95;
+  --primaryColor: #5163ff;
+  --headingColor: #00234b;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-inter), sans-serif;
+}
+
+@layer utilities {
+  .bg-radial-white-glow {
+    background: radial-gradient(
+        64.58% 59% at 37.13% 12%,
+        rgba(255, 255, 255, 0.315) 0%,
+        rgba(255, 255, 255, 0) 55.41%,
+        rgba(255, 255, 255, 0) 100%
+      ),
+      #4c5def;
+  }
+  .custom-box-shadow {
+    box-shadow: 4px 10px 20px rgba(81, 99, 255, 0.26),
+      inset -3px -4px 7px rgba(255, 255, 255, 0.15);
+  }
+  .inset-double-shadow {
+    box-shadow: 0px -4px 18.5px rgba(255, 255, 255, 0.79) inset,
+      0px -2px 4px rgba(255, 255, 255, 0) inset;
+  }
+  .inset-double-light {
+    box-shadow: 0px 33px 101.1px rgba(238, 239, 255, 1) inset,
+      0px -23px 25.3px rgba(246, 247, 255, 1) inset;
+  }
+  .custom-text-shadow {
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.25);
+  }
+  .bg-custom-radial {
+    background: radial-gradient(
+        92.09% 85.42% at 86.3% 87.5%,
+        rgba(0, 0, 0, 0.23) 0%,
+        rgba(0, 0, 0, 0) 86.18%
+      ),
+      radial-gradient(
+        65.28% 65.28% at 26.39% 20.83%,
+        rgba(255, 255, 255, 0.413) 0%,
+        rgba(255, 255, 255, 0) 69.79%,
+        rgba(255, 255, 255, 0) 100%
+      ),
+      #2f6eff;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .primary-gradient {
+    background: linear-gradient(90deg, #708bfd 0%, #fe71b9 100%);
+  }
+  .hover-vertical-gradient:hover {
+    background: linear-gradient(180deg, #fe71b9 0%, #708bfd 100%);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .swiper-wrapper {
+    align-items: end;
+  }
+  .bg-radial-white-glow:hover {
+    background: #4b5bff !important;
+  }
+
+  .swiper-slide {
+    position: relative; /* so absolutely positioned children work if needed */
+    height: 605px; /* max height for the largest slide */
+    overflow: visible; /* allow some overflow if you animate scaling */
+  }
+
+  .slide-inner {
+    width: 100%;
+    height: 490px; /* default height */
+    max-height: 605px; /* max height limit */
+    overflow: hidden; /* hide content overflow on height changes */
+    will-change: transform, opacity, height; /* optimize for GSAP animations */
+    transform-origin: center bottom; /* for scaleY animations if used */
+    transition: height 0.7s ease; /* fallback smooth height changes */
+  }
+  .relative.h-\[605px\] {
+    height: 605px;
+    overflow: visible;
+  }
+}
